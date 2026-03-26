@@ -15,6 +15,7 @@ nav {
     z-index: 999;
 }
 
+
 .clear {
     clear: both;
 }
@@ -52,16 +53,31 @@ nav .list ul li a {
     color: black;
 }
 
+@media (max-width:666px) {
+    nav {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    nav .logo p {
+        padding: 9px 13px;
+    }
+
+    nav .logo p span {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
 header {
     width: 100%;
-    height: 800px;
+    height: 100vh;
     position: relative;
 }
 
 header img {
     width: 100%;
     height: 100%;
-
 }
 
 header .hero {
@@ -82,13 +98,33 @@ header .hero p span {
     font-size: 35px;
 }
 
+@media (max-width:666px) {
+
+
+    header img {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    header .hero {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    header .hero p span {
+        padding: 5px;
+        font-size: 20px;
+    }
+}
+
 #project {
-   padding-top:50px ;
+    padding-top: 50px;
     font-weight: normal;
 }
 
 .container {
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -114,18 +150,48 @@ header .hero p span {
 }
 
 #project .parent .child span {
+    padding: 5px 8px;
     position: absolute;
     top: 0;
     background-color: black;
     color: white;
     padding: 5px 8px;
+}
 
+@media (max-width:666px) {
+    #project {
+        padding-top: 10px;
+        font-size: 10px;
+    }
+
+    #project h2 {
+        padding: 0;
+    }
+
+    #project .parent .child {
+        width: calc(100% / 2 - 10px);
+        display: none;
+    }
+
+    #project .parent-show .child:first-child {
+        display: block;
+    }
+
+    #project .parent-show .child:nth-child(2) {
+        display: block;
+    }
+
+    #project .parent .child span {
+        font-size: 8px;
+        padding: 2px;
+
+    }
 }
 
 #about {
     font-weight: normal;
     text-transform: capitalize;
-    padding-top:65px ;
+    padding-top: 65px;
 }
 
 #about hr {
@@ -170,8 +236,57 @@ header .hero p span {
     line-height: 30px;
 }
 
+@media (max-width:666px) {
+    #about {
+        padding-top: 10px;
+        font-size: 10px;
+    }
+
+    #about hr {
+        margin-top: 10px;
+        opacity: 0.3;
+    }
+
+    #about p {
+        margin-bottom: 30px;
+        font-size: 10px;
+    }
+
+    #about .parent {
+        margin-top: 60px;   
+    }
+
+    #about .parent .child {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    #about .parent .child .text {
+        margin: 10px 0;
+    }
+
+    #about .parent .child .text .name {
+        margin: 10px 0;
+        font-size: 15px;
+    }
+
+    #about .parent .child .text .jop {
+        margin: 10px 0;
+        color: rgba(0, 0, 0, 0.181);
+
+    }
+
+    #about .parent .child .text .button {
+        width: 100%;
+        background-color: rgba(148, 148, 148, 0.386);
+        text-align: center;
+        line-height: 30px;
+        font-size: 15px;
+    }
+}
+
 #contact {
-    padding-top:65px ;
+    padding-top: 65px;
 }
 
 #contact h2 {
@@ -204,7 +319,32 @@ header .hero p span {
 #contact img {
     width: 100%;
 }
+@media (max-width:666px) {
+    #contact {
+    padding-top: 30px;
+    font-size: 10px;
+}
 
+#contact p {
+    margin-bottom:10px;
+}
+
+#contact form input {
+    height: 20px;
+    margin-bottom: 10px;
+    font-size: 8px;
+}
+
+#contact form button {
+   font-size: 8px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+#contact img {
+    width: 100%;
+}
+}
 footer {
     background-color: black;
     color: whitesmoke;
